@@ -149,7 +149,7 @@ class Ubs extends Component {
                 this.codeInput = el
             }} editable={this.state.details.code === ""} placeholder="code"
                        defaultValue={defCode}><span
-                className="column-title">{language.e().account.modal.code}:</span></InputItem>
+                >{language.e().account.modal.code}:</span></InputItem>
 
             <InputItem type='money' clear moneyKeyboardAlign='left' ref={el => {
                 this.valueInput = el
@@ -247,13 +247,13 @@ class Ubs extends Component {
                             <List.Item>
                                 <div>
                                     <div style={{float: 'left', width: '30%', textAlign: 'center'}}><span
-                                        className="column-title">{language.e().fund.poolAmount}</span></div>
+                                        >{language.e().fund.poolAmount}</span></div>
                                     <div style={{float: 'left', width: '5%', textAlign: 'center'}}>&nbsp;</div>
                                     <div style={{float: 'left', width: '30%', textAlign: 'center'}}><span
-                                        className="column-title">{language.e().fund.fundAmount}</span></div>
+                                        >{language.e().fund.fundAmount}</span></div>
                                     <div style={{float: 'left', width: '5%', textAlign: 'center'}}>&nbsp;</div>
                                     <div style={{float: 'left', width: '30%', textAlign: 'center'}}><span
-                                        className="column-title">{language.e().fund.total}</span></div>
+                                        >{language.e().fund.total}</span></div>
                                 </div>
                                 <div>
                                     <div style={{
@@ -262,7 +262,7 @@ class Ubs extends Component {
                                         textAlign: 'center'
                                     }}>{decimals(this.state.info.balance - this.state.info.fundAmount, 18, 5)}</div>
                                     <div style={{float: 'left', width: '5%', textAlign: 'center'}}><span
-                                        className="column-title">+</span></div>
+                                        >+</span></div>
                                     <div style={{
                                         float: 'left',
                                         width: '30%',
@@ -311,11 +311,11 @@ class Ubs extends Component {
                 <List.Item key={index}
                            style={{borderRadius: (index == self.state.details.values.length - 1) ? '0 0 5px 5px' : ''}}>
                     <div style={{float: "left", width: '25%', textAlign: 'center'}}><span
-                        className="column-title">{index + 1}</span></div>
+                        >{index + 1}</span></div>
                     <div style={{float: "left", width: '50%', textAlign: 'center'}}><span
-                        className="column-title">{decimals(value, 18, 9)}</span></div>
+                        >{decimals(value, 18, 9)}</span></div>
                     <div style={{float: "left", width: '25%', textAlign: 'center'}}><span
-                        className="column-title">{statue}</span></div>
+                        >{statue}</span></div>
                 </List.Item>
             )
         });
@@ -323,7 +323,7 @@ class Ubs extends Component {
         let exp = new Date().getTime() + 86400000 - (new Date().getHours() * 60 * 60 + new Date().getMinutes() * 60 + new Date().getSeconds()) * 1000 - new Date().getTimezoneOffset() * 60 * 1000;
         // let exp = new Date().getTime() - new Date().getTime() % (10 * 60 * 1000) + (10 * 60 * 1000);
         return (
-            <div style={{maxWidth: '600px', backgroundColor: '#080810'}}>
+            <div style={{maxWidth: '600px', backgroundColor: '#ffffff'}}>
                 <div style={{position: "absolute", top: "0", width: "100%", maxWidth: "600px"}}>
                                         <span style={{float: "left", padding: "15px"}} onClick={() => {
                                             Modal.alert(
@@ -348,7 +348,7 @@ class Ubs extends Component {
                                                 [
                                                     {text: <span>OK</span>}])
                                         }}>
-                                            <span style={{color: "#fff"}}>
+                                            <span style={{color: "#000059"}}>
                                                 {language.e().account.rule}
                                             </span>
 
@@ -363,7 +363,7 @@ class Ubs extends Component {
                             {text: <span>русский</span>, onPress: () => this.setLang('be_BY')}
                         ])
                     }}>
-                         <span style={{color: "#fff"}}>{this.state.lang}</span></span>
+                         <span style={{color: "#000059"}}>{this.state.lang}</span></span>
                 </div>
                 <div className="header">
                     {/*<ClickNHold*/}
@@ -409,11 +409,11 @@ class Ubs extends Component {
                         <List.Item>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.balance}:</span>
+                                >{language.e().account.balance}:</span>
                             </div>
                             <div
                                 style={{float: 'left', width: '50%'}}>
-                                <span className="column-value">{decimals(this.state.account.balance, 18, 4)}</span> SERO
+                                <span>{decimals(this.state.account.balance, 18, 4)}</span> SERO
                             </div>
                             <div style={{float: 'right', width: '20%'}}>
                                 <div style={{float: 'right'}}>
@@ -428,53 +428,53 @@ class Ubs extends Component {
                         <List.Item>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.value}:</span>
+                                >{language.e().account.value}:</span>
                             </div>
                             <div style={{float: 'right', width: '70%'}}><span
-                                className="column-value">{decimals(this.state.details.value - this.state.details.returnValue, 18, 4)}</span> SERO
+                                >{decimals(this.state.details.value - this.state.details.returnValue, 18, 4)}</span> SERO
                             </div>
                         </List.Item>
 
                         <List.Item>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.staticReward}:</span>
+                                >{language.e().account.staticReward}:</span>
                             </div>
                             <div
                                 style={{float: 'left', width: '70%'}}><span
-                                className="column-value">{decimals(this.state.details.staticReward, 18, 4)}</span> SERO
+                                >{decimals(this.state.details.staticReward, 18, 4)}</span> SERO
                             </div>
                         </List.Item>
 
                         <List.Item>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.returnValue}:</span>
+                                >{language.e().account.returnValue}:</span>
                             </div>
                             <div
                                 style={{float: 'right', width: '70%'}}><span
-                                className="column-value">{decimals(this.state.details.returnValue, 18, 4)}</span> SERO
+                                >{decimals(this.state.details.returnValue, 18, 4)}</span> SERO
                             </div>
                         </List.Item>
 
                         <List.Item>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.dynamicReward}:</span>
+                                >{language.e().account.dynamicReward}:</span>
                             </div>
                             <div
                                 style={{float: 'rights', width: '70%'}}><span
-                                className="column-value">{decimals(this.state.details.dynamicReward, 18, 4)}</span> SERO
+                                >{decimals(this.state.details.dynamicReward, 18, 4)}</span> SERO
                             </div>
                         </List.Item>
                         <List.Item>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.totalAynamicReward}:</span>
+                                >{language.e().account.totalAynamicReward}:</span>
                             </div>
                             <div
                                 style={{float: 'right', width: '70%'}}><span
-                                className="column-value">{decimals(this.state.details.totalAynamicReward, 18, 4)}</span> SERO
+                                >{decimals(this.state.details.totalAynamicReward, 18, 4)}</span> SERO
                             </div>
                         </List.Item>
 
@@ -482,14 +482,14 @@ class Ubs extends Component {
                         <List.Item style={{borderRadius: '0 0 5px 5px'}}>
                             <div
                                 style={{float: 'left', width: '30%'}}><span
-                                className="column-title">{language.e().account.canWithdraw}:</span>
+                                >{language.e().account.canWithdraw}:</span>
                             </div>
                             <div
                                 style={{float: 'left', width: '40%'}}> <span
-                                className="column-value">{decimals(this.state.details.canWithdraw, 18, 4)}</span> SERO
+                                >{decimals(this.state.details.canWithdraw, 18, 4)}</span> SERO
                             </div>
                             <div style={{float: 'right', width: '30%'}}>
-                                <div style={{float: 'right'}}>
+                                <div style={{float: 'right',marginLeft:'2px'}}>
                                     <Button
                                         disabled={this.state.details.canWithdraw === 0}
                                         onClick={() => {
@@ -518,7 +518,7 @@ class Ubs extends Component {
                                     <span className="column-value">{this.state.details.selfCode}</span>
                                     &nbsp;&nbsp;&nbsp;
                                     {this.state.details.selfCode !== "" &&
-                                    <span onClick={() => {
+                                    <span className="column-value" onClick={() => {
                                         copy(this.state.details.selfCode);
                                         Toast.success(language.e().copySucc, 1);
                                     }
@@ -531,9 +531,9 @@ class Ubs extends Component {
                         <List.Item>
                             <div>
                                 <div style={{float: 'left'}}>
-                                    <span className="column-title">{language.e().account.recommend.achievement}: </span>
+                                    <span >{language.e().account.recommend.achievement}: </span>
                                     <span
-                                        className="column-title">{decimals(self.state.details.values[0], 18, 9)} SERO</span>
+                                        >{decimals(self.state.details.values[0], 18, 9)} SERO</span>
                                 </div>
                             </div>
                         </List.Item>

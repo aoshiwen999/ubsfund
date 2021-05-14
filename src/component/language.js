@@ -141,7 +141,7 @@ Developer philosophy:
             invest: "投资",
             withdraw: "提现",
             reinvest: "复投",
-            trigger: "触发收益",
+            trigger: "点击签到",
             staticReward: "当天静态收益",
             dynamicReward: "当天分享收益",
             canWithdraw: "收款归集",

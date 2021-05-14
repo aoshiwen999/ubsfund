@@ -17,7 +17,7 @@ code {
 }
 
 .title {
-  color: #c0a26d;
+  color: #000000;
 }
 
 .am-list-item {
@@ -25,7 +25,7 @@ code {
   display: flex;
   padding-left: 15px;
   min-height: 44px;
-  background-color: #2b2c2b !important;
+  background-color: #f6f9fd !important;
   vertical-align: middle;
   overflow: hidden;
   transition: background-color 200ms;
@@ -39,14 +39,14 @@ code {
   height: 30px !important;
   line-height: 30px !important;
   color: #f7f7f7 !important;
-  background-color: #313131 !important;
-  border: 1PX solid rgb(97, 97, 97) !important;
+  background-color: #82aac4 !important;
+  border: 1PX solid #82aac4 !important;
   border-radius: 5px !important;
 }
 
 .column-title {
-  color: #fff;
-  font-size:14px
+  color: #ffffff;
+  font-size:16px
 }
 
 .column-value {
@@ -81,19 +81,24 @@ code {
 }
 
 div{
-  color: #fff
+  color: #919395
 }
 
 div span{
-  color: #fff;
+  color: #919395;
+  font-size: 14px;
+}
+
+.am-button span {
+  color: #ffffff !important;
 }
 
 .fake-input{
-  color: #fff !important;
+  color: #000000 !important;
 }
 
 input{
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .am-modal-mask{
@@ -101,12 +106,12 @@ input{
 }
 
 .am-modal-content{
-  background-color: #434343 !important;
+  background-color: #ffffff !important;
 }
 
 #root{
   max-width: 600px;
-  background: #232323;
+  background: #ffffff;
 }
 
 .clock{
@@ -130,7 +135,7 @@ input{
   padding-left: 15px;
   padding-right: 15px;
   min-height: 44px;
-  background-color: rgb(105,105,105);
+  background-color: #82aac4;
   vertical-align: middle;
   overflow: hidden;
   transition: background-color 200ms;
@@ -154,7 +159,7 @@ input{
   text-align: left;
   overflow-wrap: break-word;
   font-size: 12px;
-  color: #f7f7f7;
+  color: #696969;
   overflow-y:scroll;
 }
 
