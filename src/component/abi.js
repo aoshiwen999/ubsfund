@@ -9,7 +9,7 @@ const config = {
     github: "https://github.com/ubsgame/ubsfund",
     author: "ubsgame",
     url: document.location.href,
-    logo: document.location.protocol + '//' + document.location.host + '/ubsfund/logo.png',
+    logo: document.location.protocol + '//' + document.location.host + '/logo.png',
     barColor:"#afe2ff",
     navColor:"#afe2ff",
     barMode:"dark",
