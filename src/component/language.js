@@ -87,33 +87,34 @@ class Language {
             }
         },
         rule: `
-UBS Game Contract Rules:
-    1. Use referral codes to establish connection.
-    2. Participation Range: Minimum 10 SERO, achieve or accumulate more than 100,000 SERO to get income without burns.
-    3. Fixed Income
-        a) Immediately after participation, a fixed income limit of three times the investment amount is displayed, and this limit can be increased indefinitely. 
-        b) The fixed income is released every day according to 1% of the contract's total fund account until the fixed income is three times the investment amount, which automatically triggers the contract to stop. 
-        c) You can renew the contract after the suspension. The daily income can be withdrawn and reinvested.
-    4. Referral Income
-        a) Enjoy 100% Fixed income of direct referrals
-        b) Earn direct referral income up to 20,000 SERO and enjoy 10% Fixed income of the second level referral.
-        c) For every 10,000 SERO increase in direct referral income, you can enjoy 10% more Fixed income of each person being referred up to 20 levels. 
-        d) The referral income is burned, i.e.  the referral income is calculated according to the lower principal amount of the referrer and referee. If the investment amount reaches 100,000 SERO or more, your SERO income will have no burns. 
-        e) Daily settlement of referral income, cash withdrawal and re-investment.
-    5. Protection Mechanism
-        a) When the account funds are less than 5% of the Protection Fund, the system automatically triggers the "Fund Countdown" mechanism of the Protection Fund. 
-        b) The countdown is of 72 hours and the timer will automatically close when any participant funds are deposited during this period and the system will continue to operate normally. 
-        c) The system starts the timer again hence an effective cycle continues. 
-        d) If the participant funds are not received within 72 hours, the “Protection Fund + Fund Pool Balance" is evaluated according to the last 10 participations that entered the market.
-    6. 92% of player funds will go to the Fund Pool, 6% are for technical services and 2% are for protection funds.
-    7. Each account can view direct sales performance and performance of lower 20 levels.
-    8. The system is open source, the data is on the chain, the code is written, decentralized accounting is performed, there is no backdoor, it cannot be tampered, it runs automatically and is distributed automatically.
-    9. The system has open contract rules and default referral code, players can actively participate without referrers.
-   
-Developer philosophy:
-    Freedom of wealth
-    Easier Finance
-    Improve Life`,
+UBS Foundation Contract Rules
+
+UBS Foundation DAPP aims to create a decentralized foundation operation and management platform for the UBS series of ecology. Through the three core functions of "weight + governance + dividends", capable and powerful UBS loyal users can participate. As long as they get the weight, they can obtain the qualifications of the UBS foundation. The directors of the UBS Foundation enjoy the highest governance and dividend rights over the UBS series of ecology, and will also become the core force for operating the UBS series of ecology.
+
+The Defi types of the UBS series ecology currently under planning and development include: DEX, Lending, Assets...
+
+Main function introduction
+1.【weight】
+1.1 The weight is divided into SERO weight and UBSC weight. The two sub-weights each account for 50% of the comprehensive weight ratio. The resulting ratio is the weight ratio of the account. The weight ratio is used to participate in "governance" and "dividends". The only indicator.
+1.2 SERO weight currency amount: SERO weight is the address of the investment into the UBS ecological contract. All investments, reinvestments, and withdrawals are connected to the original UBS ecological contract. It is only through the current foundation DAPP to log in, that is, the front-end login is different from the original UBS. The foundation front-end program will automatically calculate the accumulated investment currency to determine the qualification and level of the foundation director of the account.
+1.3 Enter the SERO weighting interface through the current DAPP, and when the actual investment and reinvestment amount is ≥200,000 SERO (which can be called the weighted currency amount), the contract will automatically activate the foundation general director qualification of the account.
+1.4 SERO weight ratio: the weighted currency amount of the current account / the total weighted currency amount of all accounts with director qualifications = the SERO weight ratio of the current account
+1.5 The directors of the foundation are divided into three levels according to the amount of weighted currency, and different levels correspond to different rights and interests (weight acceleration). Ordinary directors, that is, 200,000 SERO ≤ weighted currency volume <1 million SERO, and the weight acceleration is 0%; silver directors, that is, 1 million SERO ≤ weighted currency volume <3 million SERO, and the weight acceleration is 5%; gold medal directors, that is weighted currency The amount is ≥ 3 million SERO, and the weight is accelerated to 10%.
+1.6 After activating the UBS Foundation director qualification, if the weighted currency is less than 200,000 SERO for the first time, the contract will automatically cancel the UBS Foundation director qualification of the account, and there will be at most one chance to activate the foundation director qualification of the account again. If the weighted currency of the account falls below 200,000 SERO for the second time, the account will be automatically cancelled the foundation director qualification and will permanently lose the authority to become a director qualification again.
+1.7 For the first account to activate the qualifications of foundation directors, the invitation sharing code must be the origin invitation code, namely ZFX5W3MTNWZHH. The accounts of other directors must also be linked under this account (inter-generational allowed). If the account is linked from the invitation sharing code of another account, even if the amount of investment currency is ≥200,000 SERO, it will not be eligible for directorship.
+1.8 UBSC weight: will be defined after UBSC is officially released
+
+2.【Governance】
+2.1 The market operation promotion plan for the UBS series ecology, as well as the current UBS Foundation DAPP usage and function modification suggestions, can all be initiated in the "governance" function.
+2.2 After the proposal is initiated, all foundation directors will vote on the proposal (agree/oppose), and the voting ratio is calculated based on the weight ratio. When the voting "agree" ratio exceeds 50%, the proposal will be implemented. When the vote "against" the proportion exceeds 50%, the proposal will be automatically invalidated.
+2.3 After the proposal is passed, there are two ways to implement it. The first is the content that can be read and executed automatically by the current contract, and the contract will run automatically. For example, the amount of xx coins in the dividend pool is transferred to the xx address, such as delisting a certain director account, and the contract can realize automatic execution logic. The second is the content that cannot be read by the current contract and is automatically executed. For example, if you want to modify some functions of the current foundation DAPP, such as constructive and forward-looking suggestions for the UBS series of ecological DAPPs, you can use the in the proposal content edit box "Send to Developer" sends the content to the developer, who will execute it manually.
+
+3.【Dividends】
+3.1 Developers will automatically inject 2% of the daily technical service fees from UBS into the UBS Foundation dividend pool, and some UBSCs that will be pre-mined will be automatically injected into the UBS dividend pool according to the contract after going online. These will all Become a "dividend fund" of the UBS Foundation
+3.2 The distribution of the dividend fund will be linear in time, part of it will be automatically allocated to the account of the foundation directors, and part of it will be automatically used for the repurchase and destruction of UBSC. The specific rules will be announced after the full version is online.
+
+All the contract rules mentioned above are draft versions and have not yet been fully implemented. The realization of all technical functions can only be completed with SERO 2.0 technology. The above rules may also be changed moderately during the development of the full version. Please refer to the contract rules after the full version is online. Here, I wish more people become directors of the UBS Foundation! Let us create a myth with UBS!
+`,
         rule1: 'Default referral code:ZFX5W3MTNWZHH'
     };
 
@@ -171,30 +172,33 @@ Developer philosophy:
             }
         },
         rule: `
-UBS合约玩法规则：
-    1.以推荐码做为链接关系
-    2.参与范围：10 枚SERO以上，达到或累计达到10万以上SERO奖金无烧伤
-    3.静态收益
-        1) 参与后，立即显示投资额3倍的静态收益额度，此额度可无限追加。 
-        2) 静态收益每天按照合约总资金账户的1.5%释放，直到静态收益3倍于投资额，自动触发合约停止。
-        3) 停止后可复投续约，每天收益可提现可复投 
-    4.分享收益
-        a）永久享受一层被分享人静态收益的100% 
-        b）直接分享业绩达2万SERO，可享受二层被分享人静态收益的10% 
-        c）直接分享业绩每增加1万SERO，可增加享受多1层被分享人静态收益的10%，最高可享受20层 
-        d）分享收益有烧伤，即计算分享收益时，按分享人与被分享人的本金两者中较小者计算。投资额达到10万及10万以上SERO则奖金无烧伤 
-        e）分享收益每日结算，可提现可复投 
-    5.保障机制
-        1)当资金账户低于保障基金5%时，系统自动触发保障基金大奖倒计时机制。
-        2）倒计时长72小时，期间关闭一切参与资金，待到72小时后保障资金+资金账户余额按照最后参与进场的10笔参数与数量按照比例分配。
-        3)第一阶段玩家92%进入资金池，6%为技术服务，2%进入保障基金，当保障资金总量约70万SERO时合约启动第二阶段，停止保障资金增加2%自动进入总资金池即94%进入资金池，每天按照资金池总量的1.5%进行分配收益。
-        4)为了实现UBS长久稳定运行，我们将进行把去中心化的POS权益节点收益接入UBS生态合约池，这样可以实现生态长久稳定运行，可伴随POS收益长久运行。
-    6、系统开源，数据上链，代码写定，去中心化记账，没有后门，不可篡改，自动运行，自动分发。
-    7、系统公开合约规则及默认推荐码，玩家可在无推荐人的情况下主动参与。
-         开发者理念：
-         让财富更自由 
-         让金融更简单
-         让生活更美好`,
+UBS基金会合约规则
+
+UBS基金会DAPP，旨在为UBS系列生态打造去中心化的基金会运营管理平台。通过“权重+治理+分红”三大核心功能，让有能力、有实力的UBS忠实用户都可以参与，只要获得权重，就可以获得UBS基金会的理事资格。UBS基金会理事享有对UBS系列生态的最高治理权和分红权，也将成为运营UBS系列生态的核心力量。
+目前已在策划开发中的UBS系列生态的Defi类型包括：DEX、借贷、收益聚合等...
+
+主要功能介绍
+一 【权重】
+1.1 权重分为SERO权重及UBSC权重，两个分项权重各占综合权重比例的50%，得出来的比例即为该账户的权重比例，权重比例是用来参与“治理”及“分红”的唯一指标。
+1.2 SERO权重币量：SERO权重即是投资进入UBS生态合约地址，所有投资、复投、提现，都是接入原UBS生态合约。只是通过当前基金会DAPP进入，即与原UBS不同的前端登入，基金会前端的程序将自动计算累积投资币量，从而判定该账户的基金会理事资格与等级。
+1.3 通过当前DAPP进入SERO权重界面，实际投资及复投币量≥20万SERO时（可称为权重币量），合约将自动激活该账户的基金会普通理事资格。
+1.4 SERO权重比例：当前账户的权重币量/所有具备理事资格账户的总权重币量=当前账户的SERO权重比例
+1.5 基金会理事按权重币量分为三个等级，不同等级对应不同的权益（权重加速）。铜牌理事，即 20万SERO≤权重币量＜100万SERO，权重加速为0%；银牌理事，即100万SERO≤权重币量＜300万SERO，权重加速为5%；金牌理事，即权重币量≥300万SERO，权重加速为10%。
+1.6 激活UBS基金会理事资格后，如果权重币量第一次低于20万SERO，合约将自动取消该账户的UBS基金会理事资格，最多有一次机会可以再次激活该账户的基金会理事资格。如果该账户的权重币量第二次低于20万SERO，该账户将被自动注销基金会理事资格，且将永久失去再次成为理事资格的权限。
+1.7 第一个激活基金会理事资格的账户，邀请分享码必须为原点邀请码，即ZFX5W3MTNWZHH。其它理事的账户也必须链接在这个账户的下面（允许隔代）。若从其它账户的邀请分享码链接的账户，即使投资币量≥20万SERO，也无法获得理事资格。
+1.8 UBSC权重：将在UBSC正式发布后定义
+
+二 【治理】
+2.1 关于UBS系列生态的市场运营推广方案，以及当前的UBS基金会DAPP的使用及功能修改建议，都可以在“治理”功能中进行发起提案。
+2.2 发起提案后，由所有基金会理事对提案进行投票表决（同意/反对），投票比例以权重比例进行计算。当投票“同意”比例超过50%，该提案将被执行。当投票“反对”比例超过50%，该提案将自动作废。
+2.3 提案通过后，执行的方式有两种。第一种是当前合约可以读取且自动执行的内容，合约将自动运行。比如转出分红池中xx币量到xx地址，比如除名某理事账户等功能，合约可以实现自动执行逻辑。第二种是当前合约无法读取且自动执行的内容，比如希望修改当前基金会DAPP的某些功能，比如对UBS系列生态DAPP有建设性前瞻性的建议，都可以通过提案内容编辑框中的“发送给开发者”把内容发送给开发者，开发者将人工执行。
+
+三 【分红】
+3.1 开发者将从UBS每天获得的2%技术服务费自动注入到UBS基金会分红池中，还有即将被预挖的部分UBSC将在上线后按照合约自动注入到UBS分红池中，这些都将成为UBS基金会的“分红基金”
+3.2 分红基金的分发，将会按时间线性，部分自动分配给基金会理事账户，部分自动用于UBSC的回购销毁等。具体细则，待完整版上线后公布。
+
+上述的所有合约规则皆为拟定版本，目前尚未完全实现，所有技术功能的实现需要配合SERO 2.0技术才可以完成。在完整版的开发过程中也可能会对上述规则有适度的改变，请以完整版上线后的合约规则为准。在此，预祝更多人成为UBS基金会理事！让我们与UBS一起创造神话！
+`,
         rule1: '默认推荐码：ZFX5W3MTNWZHH'
     };
 
@@ -263,33 +267,34 @@ UBS合约玩法规则：
             }
         },
         rule: `
-UBSゲーム契約ルール：
-    1.紹介コードを使用して接続を確立します。
-    2.参加範囲：少なくとも10 SERO。火傷なしで100,000を超えるSEROボーナスを達成または蓄積します。
-    3.固定収入
-        a）参加直後に、投資額の3倍の固定所得制限が表示されます。この制限は無期限に増やすことができます。
-        b）静的な収入は、静的な収入が投資額の3倍になり、自動的に契約を終了するまで、契約の総資金口座の1％に従って毎日解放されます。
-        c）契約は一時停止後に更新できます。毎日の収入を引き出して再投資することができます
-    4.紹介収入
-        A）直接紹介の100％静的な収入をお楽しみください。
-        B）直接紹介収入で最大20,000 SERO を獲得し、第2レベルの紹介固定収入の10％を享受します。
-        C）直接紹介から得る10,000 SEROごとに、20レベルまでの各個人の固定収入の10％を獲得できます。
-        D）紹介が燃え尽きる。言い換えれば、紹介収入は、紹介とレフェリーの元本の低い方に従って計算されます。投資額が100,000 SEROを超える場合、SERO収入は燃えません。
-        E）紹介収入、現金引き出し、再投資の毎日の決済。
-    5.保護メカニズム
-        a) アカウント基金が保護基金の5％未満の場合、システムは保護基金の「基金カウントダウン」メカニズムを自動的にトリガーします。
-        b) カウントダウンは72時間で、この期間中に参加者の資金が入金された場合、タイマーは自動的に閉じられ、システムは正常に動作し続けます。
-        c) システムはタイマーを再起動し、効果的なサイクルが始まります。
-        d) 参加者の資金が72時間以内に受け取られない場合、「保護基金+資金プール残高」は、市場での過去10回の参加に従って評価されます。
-    6.プレーヤーの資金の92％は資金プールに、6％は技術サービスに、2％は保証資金に割り当てられます。
-    7.各アカウントは、直接販売収入とさらに20レベルの収入を表示できます。
-    8.これはオープンソースシステムであり、データはチェーン内にあり、コードは記述され、分散アカウンティングがあり、バックドアはなく、ハッキングできず、自動的に開始して自動的に広がります。
-    9.システムにはデフォルトでオープン契約ルールと紹介コードがあるため、プレイヤーは紹介なしで積極的に参加できます。
-    
-開発者の哲学：
-    富の自由
-    より簡単な金融
-    あなたの人生を改善する`,
+UBS財団の契約ルール
+
+UBS基金DAPPは、UBSシリーズのエコロジーのための分散型の基盤運用および管理プラットフォームを作成することを目的としています。 「ウェイト+ガバナンス+配当」の3つのコア機能を通じて、有能で強力なUBSの忠実なユーザーが参加できます。ウェイトを取得する限り、UBS財団の資格を取得できます。 UBS財団の理事は、UBSシリーズのエコロジーに対して最高のガバナンスと配当の権利を享受しており、UBSシリーズのエコロジーを運営するための中心的な力にもなります。
+
+現在計画および開発中のUBSシリーズエコロジーのDefiタイプには、DEX、貸付、収入集計、デリバティブなどがあります。
+
+主な機能紹介
+1 【重量】
+1.1ウェイトはSEROウェイトとUBSCウェイトに分けられます。2つのサブウェイトはそれぞれ総合ウェイト比率の50％を占めます。結果として得られる比率はアカウントのウェイト比率です。ウェイト比率は「ガバナンス」に参加するために使用されます。と「配当」。唯一の指標。
+1.2 SEROウェイト通貨額：SEROウェイトは、UBSエコロジー契約への投資の住所です。すべての投資、再投資、および引き出しは、元のUBSエコロジー契約に関連しています。ログインするのは現在の基金DAPPを介してのみです。つまり、フロントエンドのログインは元のUBSとは異なり、基金のフロントエンドプログラムは累積投資通貨を自動的に計算して、アカウントの基金会の資格とレベルを決定します。 。
+1.3現在のDAPPを介してSERO加重インターフェースに入り、実際の投資および再投資額が≥200,000SERO（加重通貨額と呼ぶことができます）の場合、契約はアカウントの財団事務局長資格を自動的にアクティブにします。
+1.4 SERO加重比率：経常収支の加重通貨額/取締役資格を持つすべての口座の加重通貨額の合計=経常収支のSERO加重比率
+1.5財団の理事は、加重通貨の額に応じて3つのレベルに分けられ、異なるレベルは異なる権利と利益に対応します（加重加速）。普通の取締役、つまり200,000SERO≤加重通貨量<100万SERO、および加重加速は0％;銀取締役、つまり100万SERO≤加重通貨量<300万SERO、および加重加速は5％ ;加重通貨である金メダルディレクター金額が300万SERO以上の場合、加重加速は10％です。
+1.6 UBS財団理事資格を有効にした後、加重通貨が初めて200,000 SERO未満の場合、契約はアカウントのUBS財団理事資格を自動的にキャンセルし、財団理事を有効にする機会は最大で1回です。アカウントの資格を再度取得します。アカウントの加重通貨が2回目に200,000SEROを下回った場合、アカウントは自動的に財団ディレクターの資格を取り消され、再びディレクターの資格になる権限を永久に失います。
+1.7財団理事の資格を有効にする最初のアカウントの場合、招待共有コードは元の招待コード、つまりZFX5W3MTNWZHHである必要があります。他の取締役のアカウントもこのアカウントでリンクする必要があります（世代間で許可されています）。アカウントが他のアカウントの招待共有コードからリンクされている場合、投資通貨の金額が200,000 SERO以上であっても、取締役の資格はありません。
+1.8 UBSCの重み：UBSCが正式にリリースされた後に定義されます
+
+2つの【ガバナンス】
+2.1 UBSシリーズエコロジーの市場操作促進計画、および現在のUBS基金DAPPの使用法と機能変更の提案は、すべて「ガバナンス」機能で開始できます。
+2.2提案が開始された後、すべての財団理事が提案に投票し（賛成/反対）、投票率は重み比に基づいて計算されます。議決権の「賛成」率が50％を超えた場合、提案を実施します。 「反対」の投票率が50％を超えると、提案は自動的に無効になります。
+2.3提案が可決された後、それを実装する方法は2つあります。 1つ目は、現在のコントラクトで自動的に読み取って実行できるコンテンツであり、コントラクトは自動的に実行されます。たとえば、配当プール内のxxコインの金額は、特定の取締役アカウントの上場廃止など、xxアドレスに転送され、契約は自動実行ロジックを実現できます。 2つ目は、現在の契約では読み取れず、自動的に実行されるコンテンツです。たとえば、UBSシリーズのエコロジカルDAPPの建設的で前向きな提案など、現在の基金DAPPの一部の機能を変更する場合は、プロポーザルコンテンツ編集ボックスの「開発者に送信」を使用すると、コンテンツが開発者に送信され、開発者が手動で実行します。
+
+3つの【配当】
+3.1開発者は、UBSからの毎日の技術サービス料金の2％をUBS基金の配当プールに自動的に注入し、事前にマイニングされる一部のUBSCは、オンラインになった後、契約に従ってUBSの配当プールに自動的に注入されます。すべてUBS財団の「配当基金」になります
+3.2配当基金の分配は時間的に直線的であり、その一部は自動的に財団理事の口座に割り当てられ、一部はUBSCの買戻しと破棄に自動的に使用されます。特定のルールは、フルバージョンがオンラインになった後に発表されます。
+
+上記の契約ルールはすべてドラフト版であり、まだ完全には実装されていません。すべての技術機能の実現は、SERO2.0テクノロジーでのみ完了できます。上記のルールは、フルバージョンの開発中に適度に変更される場合もあります。フルバージョンがオンラインになったら、契約ルールを参照してください。ここで、もっと多くの人がUBS財団の理事になってほしいです！ UBSで神話を作ろう！
+`,
         rule1: 'デフォルトの紹介コード：ZFX5W3MTNWZHH'
     };
 
@@ -365,33 +370,34 @@ UBSゲーム契約ルール：
         },
 
         rule: `
-Правила контракта на игру UBS 
-    1. Используйте реферальные коды для установления соединения.
-    2. Диапазон участия: не менее 10 SERO, получить или накопить более 100 000 бонусов SERO без ожогов.
-    3. Фиксированный доход
-        a) Сразу после регистрации вы увидите фиксированный лимит дохода, в три раза превышающий сумму инвестиций. Это может быть увеличено до бесконечности. 
-        b) Фиксированный доход выплачивается ежедневно в размере 1% от общей суммы контокоррентного счета до трехкратной суммы контракта. 
-        c) Контракты автоматически приостанавливаются и могут быть возобновлены после приостановки. Ежедневный доход может быть снят и реинвестирован
-    4. Реферальный доход
-        a) Заработайте 100% фиксированный доход от прямых рефералов.
-        b) Заработайте до 20 000 SERO в прямом реферальном доходе и получите 10% фиксированного дохода рефералов второго уровня.
-        c) Вы можете получить на 10% больше фиксированного дохода на человека, рекомендуется до 20 уровней на каждые 10 000 SERO прямых доходов от рефералов
-        d) Реферальный доход сжигается, т. Е. Реферальный доход рассчитывается на основе низкой основной суммы реферера и рефери. Если сумма инвестиций превышает 100 000, прибыль SERO не уменьшается.
-        e) Ежедневный расчет реферального дохода, снятия наличных и реинвестирования.
-    5. Механизм защиты
-        a) Когда средства на счете составляют менее 5% Фонда защиты, система автоматически запускает механизм «Обратный отсчет фонда» Фонда защиты. 
-        b) Обратный отсчет составляет 72 часа, и таймер автоматически закроется, когда в этот период будут зачислены средства любого участника, и система продолжит работать в обычном режиме.
-        c) Система снова запускает таймер, следовательно, эффективный цикл продолжается. 
-        d) Если средства участников не поступили в течение 72 часов, «Фонд защиты + остаток пула фондов» оценивается в соответствии с последними 10 участиями, которые вышли на рынок
-    6. 92% средств игроков пойдут в пул средств, 6% - на технические услуги и 2% - на гарантийный фонд.
-    7. Каждая учетная запись может просматривать прямые продажи продаж и производительность нижних 20 уровней.
-    8. Это система с открытым исходным кодом, данные находятся в цепочке, код написан, децентрализованный учет существует, бэкдора нет, его нельзя взломать, он запускается автоматически и распространяется автоматически.
-    9. Система имеет общедоступные правила контракта и реферальный код по умолчанию, игроки могут активно участвовать без рефереров.
+Правила договора с UBS Foundation
 
-Философия разработчика:
-    Свобода богатства
-    Легче Финансы
-    Улучшить вашу жизнь`,
+UBS Foundation DAPP стремится создать децентрализованную платформу для работы и управления фондом для экологии серии UBS. Благодаря трем основным функциям «вес + управление + дивиденды» способные и влиятельные лояльные пользователи UBS могут участвовать. Пока они набирают вес, они могут получить квалификацию фонда UBS. Директора UBS Foundation пользуются наивысшим уровнем управления и дивидендными правами в отношении серии UBS по экологии, а также станут основной силой для управления серией UBS по экологии.
+
+Типы Defi экологии серии UBS, которые в настоящее время планируются и разрабатываются, включают: DEX, кредитование, агрегирование доходов, деривативы ...
+
+Введение в основные функции
+1【вес】
+1.1 Вес делится на вес SERO и вес UBSC. Каждый из двух субвесов составляет 50% от полного весового отношения. Результирующее отношение является весовым отношением аккаунта. Весовое отношение используется для участия в «управлении» и «дивиденды» - единственный показатель.
+1.2 Сумма в валюте веса SERO: Вес SERO - это адрес инвестиции в экологический контракт UBS Все инвестиции, реинвестиции и снятие средств связаны с исходным экологическим контрактом UBS. Вход в систему возможен только через текущий фундамент DAPP, то есть интерфейсный вход отличается от исходного UBS, а клиентская программа фонда автоматически рассчитывает накопленную валюту инвестиций, чтобы определить квалификацию и уровень директора фонда учетной записи. .
+1.3 Войдите в интерфейс взвешивания SERO через текущий DAPP, и когда фактическая сумма инвестиций и реинвестирования составляет ≥200000 SERO (что можно назвать взвешенной валютной суммой), контракт автоматически активирует квалификацию генерального директора фонда для учетной записи.
+1.4 Весовой коэффициент SERO: взвешенная сумма в валюте текущего счета / общая взвешенная сумма в валюте всех счетов с квалификацией директора = весовое соотношение SERO текущего счета
+1.5 Директора фонда разделены на три уровня в зависимости от суммы взвешенной валюты, и разные уровни соответствуют разным правам и интересам (ускорение веса). Обычные директора, то есть 200000 SERO ≤ взвешенного объема валюты <1 миллиона SERO, и ускорение веса составляет 0%; серебряные директора, то есть 1 миллион SERO ≤ взвешенного объема валюты <3 миллиона SERO, и ускорение веса составляет 5% ; директора с золотой медалью, то есть взвешенная валюта. Если сумма составляет ≥ 3 миллионов SERO, ускорение веса составляет 10%.
+1.6 После активации квалификации директора UBS Foundation, если взвешенная валюта меньше 200000 SERO в первый раз, контракт автоматически отменяет квалификацию директора UBS Foundation для учетной записи, и будет не более одного шанса активировать директора фонда. квалификация аккаунта снова. Если взвешенная валюта счета упадет ниже 200 000 SERO во второй раз, учетная запись будет автоматически аннулирована квалификацией директора фонда и навсегда утратит право снова стать квалификацией директора.
+1.7 Чтобы первая учетная запись активировала квалификацию директоров фонда, код приглашения должен быть исходным кодом приглашения, а именно ZFX5W3MTNWZHH. Счета других директоров также должны быть связаны с этой учетной записью (допускается передача разных поколений). Если учетная запись связана с пригласительным кодом другой учетной записи, даже если сумма инвестиционной валюты ≥200 000 SERO, она не будет иметь права на должность директора.
+1.8 Вес UBSC: будет определен после официального выпуска UBSC
+
+2【Управление】
+2.1 План продвижения на рынок для экологии серии UBS, а также текущие предложения по использованию и модификации функций DAPP UBS Foundation могут быть инициированы в функции «управления».
+2.2 После подачи предложения все директора фондов проголосуют за предложение (согласны / против), и коэффициент голосов рассчитывается на основе весового коэффициента. Когда коэффициент голосования «согласен» превышает 50%, предложение будет реализовано. Когда доля голосов «против» превышает 50%, предложение автоматически признается недействительным.
+2.3 После того, как предложение принято, есть два способа его реализовать. Первый - это контент, который может быть прочитан и выполнен автоматически текущим контрактом, и контракт будет выполняться автоматически. Например, количество монет xx в пуле дивидендов переводится на адрес xx, например, при исключении из списка определенной учетной записи директора, и в контракте может быть реализована логика автоматического выполнения. Второй - это контент, который не может быть прочитан текущим контрактом и выполняется автоматически. Например, если вы хотите изменить некоторые функции текущего базового DAPP, такие как конструктивные и перспективные предложения для серии экологических DAPP UBS, Вы можете использовать поле редактирования содержимого предложения «Отправить разработчику», чтобы отправить содержимое разработчику, который выполнит его вручную.
+
+3【Дивиденды】
+3.1 Разработчики будут автоматически вводить 2% ежедневных сборов за технические услуги от UBS в дивидендный пул UBS Foundation, а некоторые UBSC, которые будут предварительно майнить, будут автоматически добавлены в дивидендный пул UBS в соответствии с контрактом после выхода в онлайн. все Стать «дивидендным фондом» UBS Foundation
+3.2 Распределение дивидендного фонда будет линейным во времени, часть его будет автоматически переведена на счет директоров фонда, а часть будет автоматически использована для выкупа и уничтожения UBSC. Конкретные правила будут объявлены после публикации полной версии.
+
+Все упомянутые выше правила контракта являются черновыми версиями и еще не полностью реализованы.Реализация всех технических функций может быть завершена только с помощью технологии SERO 2.0. Вышеупомянутые правила также могут быть умеренно изменены во время разработки полной версии. Пожалуйста, ознакомьтесь с правилами контракта после того, как полная версия появится в сети. Желаю, чтобы больше людей стали директорами фонда UBS! Давайте создадим миф с UBS!
+`,
         rule1: 'Реферальный код по умолчанию:ZFX5W3MTNWZHH'
     };
 
@@ -464,33 +470,34 @@ UBSゲーム契約ルール：
             }
         },
         rule: `
-UBS 게임 계약 규칙 :
-    1. 참조 코드를 사용하여 연결을 설정하십시오.
-    2. 참가 범위 : 최소 10 SERO. 화상없이 100,000 이상의 SERO 보너스를 달성하거나 축적하십시오.
-    3. 고정 수입
-        a) 참여 직후, 투자 금액의 3 배인 고정 소득 한도가 표시되며, 이는 무한정 증가 할 수 있습니다.
-        b) 고정 수입은 고정 수입이 투자액의 3 배이고 계약이 자동으로 정지 될 때까지 계약 총 자금 계정의 1 %에 따라 매일 지급됩니다.
-        c) 중단 후 계약을 갱신 할 수 있습니다. 일일 수입은 인출 및 재투자 될 수 있습니다.
-    4. 추천 소득
-        A) 직접 추천의 고정 수입의 100 %를 즐기십시오
-        B) 최대 20,000 SERO의 직접 추천 수입을 적립하고 두 번째 수준 추천의 고정 수입의 10 %를 즐기십시오.
-        C) 10,000 SERO 명의 직접 추천 소득이 증가 할 때마다 최대 20 레벨까지 권장되는 각 사람에 대해 10 % 더 많은 고정 수입을 누릴 수 있습니다
-        D) 추천 소득이 불타고 있습니다. 다시 말해, 추천 소득은 추천인과 심판의 낮은 원금 금액에 따라 계산됩니다. 투자 금액이 100,000을 초과하면 SERO 수입에 화상이 없습니다.
-        E) 추천 소득, 현금 인출 및 재투자의 일일 결제.
-    5. 보호 메커니즘
-        a) 계좌 자금이 보호 기금의 5 % 미만인 경우, 시스템은 자동으로 보호 기금의 "펀드 카운트 다운"메커니즘을 트리거합니다.
-        b) 카운트 다운 시간은 72 시간이며이 기간 동안 참가자 자금이 예치되면 타이머가 자동으로 닫히고 시스템은 계속 정상적으로 작동합니다.
-        c) 시스템은 타이머를 다시 시작하므로 유효 사이클이됩니다.
-        d) 72 시간 내에 참가자 자금을받지 못하면 "보호 기금 + 자금 풀 잔액"은 시장에 들어간 마지막 10 개의 참여에 따라 평가됩니다.
-    6. 선수 자금의 92 %가 자금 풀에, 6 %는 기술 서비스, 2 %는 보호 자금입니다.
-    7. 각 계정은 직접 판매 실적과 20 단계 이하의 성과를 볼 수 있습니다.
-    8. 시스템은 오픈 소스이고, 데이터는 체인에 있으며, 코드가 작성되고, 분산 회계가 수행되며, 백도어가 없으며, 간섭 할 수 없으며, 자동으로 실행되며 자동으로 배포됩니다.
-    9. 기본적으로 시스템에는 공개 계약 규칙과 추천 코드가 있으며 플레이어는 추천없이 적극적으로 참여할 수 있습니다.
+UBS 재단 계약 규칙
 
-개발자 철학 :
-    부의 자유
-    더 쉬운 금융
-    생활 향상`,
+UBS 재단 DAPP는 UBS 생태학 시리즈를위한 분산 형 재단 운영 및 관리 플랫폼을 만드는 것을 목표로합니다. "가중치 + 거버넌스 + 배당금"의 세 가지 핵심 기능을 통해 유능하고 강력한 UBS 충성 사용자가 참여할 수 있으며, 가중치가있는 한 UBS 재단의 자격을 획득 할 수 있습니다. UBS 재단 이사들은 UBS 생태학 시리즈에 대해 최고의 거버넌스와 배당 권을 누리며 UBS 생태학 시리즈 운영의 핵심 힘이 될 것입니다.
+
+현재 계획 및 개발중인 UBS 시리즈 생태학의 Defi 유형에는 DEX, 대출, 소득 집계, 파생 상품 ...
+
+주요 기능 소개
+1 【무게】
+1.1 중량은 SERO 중량과 UBSC 중량으로 나뉘며, 2 개의 하위 중량은 각각 종합 중량비의 50 %를 차지하고 그 결과 비율은 계정의 중량비이며 중량비는 "거버넌스"에 참여하는 데 사용됩니다. 그리고 "배당금". 유일한 지표.
+1.2 SERO 가중치 통화 금액 : SERO 가중치는 UBS 생태 계약에 대한 투자 주소이며 모든 투자, 재투자 및 인출은 원래 UBS 생태 계약에 연결됩니다. 현재 재단 DAPP를 통해서만 로그인 할 수 있습니다. 즉, 프론트 엔드 로그인은 원래 UBS와 다르며, 재단 프론트 엔드 프로그램은 누적 된 투자 통화를 자동으로 계산하여 계정의 재단 이사 자격 및 레벨을 결정합니다. .
+1.3 현재 DAPP를 통해 SERO 가중치 인터페이스에 들어가 실제 투자 및 재투자 금액이 200,000 SERO (가중 통화 금액이라고도 함) 이상인 경우 계약은 자동으로 계정의 재단 총감독 자격을 활성화합니다.
+1.4 SERO 가중치 비율 : 경상 계정의 가중 통화 금액 / 이사 자격이있는 모든 계정의 총 가중 통화 금액 = 경상 계정의 SERO 가중치 비율
+1.5 재단의 이사는 가중 통화 금액에 따라 3 단계로 나뉘며, 각기 다른 권리와 이익 (가중 가속)에 따라 수준이 다릅니다. 일반 이사, 즉 200,000 SERO ≤ 가중 통화량 <100 만 SERO, 가중치 가속은 0 %, 실버 이사, 즉 1 백만 SERO ≤ 가중 통화량 <300 만 SERO, 가중치 가속은 5 % ; 금메달 디렉터, 즉 가중 통화 금액이 3 백만 SERO 이상인 경우 가중치 가속은 10 %입니다.
+1.6 UBS 재단 이사 자격 활성화 후 가중 통화가 처음으로 200,000 SERO 미만인 경우 계약은 자동으로 계정의 UBS 재단 이사 자격을 취소하며 재단 이사를 활성화 할 수있는 기회는 최대 1 회입니다. 다시 계정의 자격. 두 번째로 계정의 가중 통화가 200,000 SERO 미만으로 떨어지면 계정은 자동으로 재단 이사 자격이 취소되고 다시 이사 자격을 취득 할 수있는 권한이 영구적으로 상실됩니다.
+1.7 첫 번째 계정이 재단 이사의 자격을 활성화하려면 초대 공유 코드가 원본 초대 코드, 즉 ZFX5W3MTNWZHH 여야합니다. 다른 이사의 계정도이 계정으로 연결되어야합니다 (세대 간 허용). 다른 계정의 초대 공유 코드에서 계정이 연결되어있는 경우 투자 통화 금액이 200,000 SERO 이상이더라도 감독 자격이 없습니다.
+1.8 UBSC 가중치 : UBSC가 공식적으로 출시 된 후 정의됩니다.
+
+2 【거버넌스】
+2.1 UBS 시리즈 생태계에 대한 시장 운영 촉진 계획과 현재 UBS 재단 DAPP 사용 및 기능 수정 제안은 모두 "거버넌스"기능에서 시작될 수 있습니다.
+2.2 제안이 시작된 후 모든 재단 이사는 제안에 대해 투표 (동의 / 반대)하고 투표 비율은 가중치를 기준으로 계산됩니다. 투표 "동의"비율이 50 %를 초과하면 제안이 실행됩니다. "반대"비율이 50 %를 초과하면 제안이 자동으로 무효화됩니다.
+2.3 제안이 통과 된 후이를 구현하는 두 가지 방법이 있습니다. 첫 번째는 현재 계약에서 자동으로 읽고 실행할 수있는 콘텐츠이며 계약이 자동으로 실행됩니다. 예를 들어, 특정 디렉터 계정을 상장 해제하는 등 배당 풀에있는 xx 코인의 양이 xx 주소로 이체되고 계약은 자동 실행 로직을 구현할 수 있습니다. 두 번째는 현재 계약에서 읽을 수없는 콘텐츠로 자동 실행됩니다. 예를 들어 UBS 생태 DAPP 시리즈에 대한 건설적이고 미래 지향적 인 제안과 같은 현재 재단 DAPP의 일부 기능을 수정하려는 경우, 제안 내용 편집 상자에서 "개발자에게 보내기"를 사용하여 수동으로 실행할 개발자에게 내용을 보냅니다.
+
+3 【배당금】
+3.1 개발자는 UBS의 일일 기술 서비스 수수료의 2 %를 UBS 재단 배당 풀에 자동으로 주입하고, 사전 채굴 될 일부 UBSC는 온라인 접속 후 계약에 따라 UBS 배당 풀에 자동으로 주입됩니다. 모두 UBS 재단의 "배당 기금"이됩니다.
+3.2 배당금의 분배는 시간에 따라 선형 적이며 일부는 재단 이사의 계정에 자동으로 할당되며 일부는 UBSC의 환매 및 폐기에 자동으로 사용됩니다. 특정 규칙은 정식 버전이 온라인 상태가 된 후에 발표됩니다.
+
+위에서 언급 한 모든 계약 규칙은 초안 버전이며 아직 완전히 구현되지 않았으며 모든 기술 기능의 구현은 SERO 2.0 기술로만 완료 할 수 있습니다. 상기 규정은 정식 버전 개발 과정에서 다소 변경 될 수 있으므로 정식 버전이 온라인 상태가 된 후 계약 규정을 참고하시기 바랍니다. 여기에서 더 많은 사람들이 UBS 재단의 이사가 되었으면합니다! UBS로 신화를 만들어 봅시다!
+`,
         rule1: '기본 추천 코드 :ZFX5W3MTNWZHH'
     };
 
