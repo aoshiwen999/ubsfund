@@ -175,3 +175,11 @@ input{
   max-height: 400px;
   overflow-y: scroll;
 }
+
+.my-share{
+  width: 100%;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  display: block;
+}

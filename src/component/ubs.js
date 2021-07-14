@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Modal, Toast, List, WhiteSpace, WingBlank, InputItem, Button, Flex, TextareaItem} from "antd-mobile";
+import {Modal, Toast, List, WhiteSpace, WingBlank, InputItem, Button, Flex, TextareaItem, Badge} from "antd-mobile";
 import BigNumber from 'bignumber.js'
 import language from './language'
 import abi from "./abi";
@@ -35,7 +35,8 @@ class Ubs extends Component {
                 childsCode: [],
             },
             info: {closureTime: 0},
-            lang: "Language"
+            lang: "Language",
+            myShare:0
         }
     }
 
@@ -47,6 +48,9 @@ class Ubs extends Component {
         abi.info(mainPkr, function (info) {
             self.setState({info: info});
         })
+        abi.getMyState(mainPkr,function (rest){
+            self.setState({myShare: rest[1].toNumber()>0?new BigNumber(rest[0]).multipliedBy(100).dividedBy(new BigNumber(rest[1])).toFixed(4,1):0});
+        })
     }
 
     componentDidMount() {
@@ -54,8 +58,9 @@ class Ubs extends Component {
         abi.OnInit
             .then(() => {
                 abi.accountList(function (accounts) {
-                    self.setState({account: accounts[0]});
+
                     self.initAccount(accounts[0].mainPKr);
+                    self.setState({account: accounts[0]});
                     self.timer = setInterval(function () {
                         self.initAccount(self.state.account.mainPKr);
                     }, 10 * 1000);
@@ -298,7 +303,7 @@ class Ubs extends Component {
 
     render() {
         let self = this;
-
+        const {myShare} = this.state;
         let achievement = this.state.details.values[0];
         let items = this.state.details.values.map(function (value, index) {
             let statue;
@@ -385,19 +390,30 @@ class Ubs extends Component {
                     <List renderHeader={
                         <div>
                             <div>
-                                <span className="title">{language.e().account.title}</span>
-                                <Button
-                                    style={{width: '87px', float: 'right'}}
-                                    disabled={sameDay(Math.ceil(new Date().getTime() / 1000), this.state.details.staticTimestamp) || this.state.details.staticReward === 0}
-                                    onClick={() => {
-                                        this.trigger();
-                                    }}>{
-                                    sameDay(Math.ceil(new Date().getTime() / 1000), this.state.details.staticTimestamp) ?
-                                        <CountTimeDown endTime={exp}/> : language.e().account.trigger
-                                }</Button>
+                                <Flex>
+                                    <Flex.Item style={{flex:1}}>
+                                        <span className="title">{language.e().account.title}</span>
+                                    </Flex.Item>
+                                    <Flex.Item style={{flex:2}}>
+                                        {myShare>0 && <span className="my-share"><Badge text={`${language.e().account.rate}: ${myShare}%`}  style={{ marginLeft: 12, padding: '5px',fontSize:'12px',fontWeight:600, backgroundColor: '#21b68a', borderRadius: 5 }} /></span>}
+                                    </Flex.Item>
+                                    <Flex.Item style={{flex:2}}>
+                                        <Button
+                                            style={{width: '87px', float: 'right'}}
+                                            disabled={sameDay(Math.ceil(new Date().getTime() / 1000), this.state.details.staticTimestamp) || this.state.details.staticReward === 0}
+                                            onClick={() => {
+                                                this.trigger();
+                                            }}>{
+                                            sameDay(Math.ceil(new Date().getTime() / 1000), this.state.details.staticTimestamp) ?
+                                                <CountTimeDown endTime={exp}/> : language.e().account.trigger
+                                        }</Button>
+                                    </Flex.Item>
+                                </Flex>
                             </div>
                             <div style={{clear: 'both'}}></div>
+                            <WhiteSpace/>
                         </div>
+
 
                     }>
                         <List.Item onClick={this.changAccount.bind(this)} style={{borderRadius: '5px 5px 0 0'}}>

@@ -118,6 +118,13 @@ const abi = [{
 const caddress = config.contractAddress;
 const contract = serojs.callContract(abi, caddress);
 
+
+const caddressV2 = "5K99XF1THeiNXnn7Jex37sbvQuUiqYhu2k8zt2RNzmqbXPqrdqyEzSfMzuvF5mx6oFE5QGZas8iGftKdyutAshKc";
+const abiV2 =[{"constant":false,"inputs":[{"name":"_code","type":"string"}],"name":"invest","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getMyState","outputs":[{"name":"_my","type":"uint256"},{"name":"_total","type":"uint256"},{"name":"_unsettled","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"}];
+
+const contractV2 = serojs.callContract(abiV2, caddressV2);
+
+
 class Abi {
 
     constructor() {
@@ -219,11 +226,20 @@ class Abi {
     }
 
     invest(from, mainPKr, value, code, callback) {
-        this.executeMethod('invest', from, mainPKr, [code], value, callback);
+        this.executeMethodV2('invest', from, mainPKr, [code], value, callback);
     }
 
     withdraw(from, mainPKr, callback) {
         this.executeMethod('withdraw', from, mainPKr, [], 0, callback);
+    }
+
+    getMyState(from, callback) {
+        this.callMethodV2('getMyState', from, [], function (vals) {
+            console.log("vals:: ",vals)
+            if (vals !== "0x0") {
+                callback(vals);
+            }
+        });
     }
 
     callMethod(_method, from, _args, callback) {
@@ -238,6 +254,26 @@ class Abi {
         seropp.call(callParams, function (callData) {
             if (callData !== "0x") {
                 let res = contract.unPackData(_method, callData);
+                if (callback) {
+                    callback(res);
+                }
+            } else {
+                callback("0x0");
+            }
+        });
+    }
+
+    callMethodV2(_method, from, _args, callback) {
+        let packData = contractV2.packData(_method, _args);
+        let callParams = {
+            from: from,
+            to: caddressV2,
+            data: packData
+        }
+
+        seropp.call(callParams, function (callData) {
+            if (callData !== "0x") {
+                let res = contractV2.unPackData(_method, callData);
                 if (callback) {
                     callback(res);
                 }
@@ -263,6 +299,41 @@ class Abi {
         let estimateParam = {
             from: mainPKr,
             to: caddress,
+            value: "0x" + value.toString(16),
+            data: packData,
+            gasPrice: "0x" + new BigNumber("1000000000").toString(16),
+            cy: "SERO",
+        }
+        seropp.estimateGas(estimateParam, function (gas, err) {
+            if (err) {
+                Toast.fail("Unknow Gas Limit")
+            } else {
+                let gasNum = new BigNumber(gas);
+                executeData["gas"] = "0x" + new BigNumber(gasNum.multipliedBy(1.1).toFixed(0)).toString(16);
+                console.log("executeData", executeData);
+
+                seropp.executeContract(executeData, function (res) {
+                    if (callback) {
+                        callback(res)
+                    }
+                })
+            }
+        });
+    }
+
+    executeMethodV2(_method, from, mainPKr, args, value, callback) {
+        let packData = contractV2.packData(_method, args);
+        let executeData = {
+            from: from,
+            to: caddressV2,
+            value: "0x" + value.toString(16),
+            data: packData,
+            gasPrice: "0x" + new BigNumber("1000000000").toString(16),
+            cy: "SERO",
+        };
+        let estimateParam = {
+            from: mainPKr,
+            to: caddressV2,
             value: "0x" + value.toString(16),
             data: packData,
             gasPrice: "0x" + new BigNumber("1000000000").toString(16),
