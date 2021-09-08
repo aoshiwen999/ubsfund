@@ -54,7 +54,9 @@ class Language {
             returnValue: " Total Fixed Income ",
             totalAynamicReward: " Total Referral Income",
             rule: "Contract Rule",
+            fundTitle:"Foundation",
             rate:"Weights",
+            uconPool:"Pool",
             modal: {
                 title: "Invest",
                 code: "Invitation code",
@@ -150,7 +152,9 @@ All the contract rules mentioned above are draft versions and have not yet been 
             returnValue: "累计静态收益",
             totalAynamicReward: "累计分享收益",
             rule: "合约规则",
+            fundTitle:"基金会",
             rate:"权重",
+            uconPool:"分红池",
             modal: {
                 title: "投资",
                 code: "分享码",
@@ -235,7 +239,9 @@ UBS系列生态包括：银行、交易所、矿池、彩票、借贷、NFT、�
             returnValue: "累積固定収入",
             totalAynamicReward: " 累積紹介収入",
             rule: "契約ルール",
+            fundTitle:"Foundation",
             rate:"重み",
+            uconPool:"Pool",
             modal: {
                 title: "投資",
                 code: "招待コード",
@@ -332,7 +338,9 @@ UBS基金DAPPは、UBSシリーズのエコロジーのための分散型の基�
             returnValue: " Общий фиксированный доход ",
             totalAynamicReward: " Общий доход рефералов ",
             rule: "Правило договора",
+            fundTitle:"Foundation",
             rate:"Вагі",
+            uconPool:"Pool",
             game: {
                 title: "Фонд защиты [Старт]",
                 poolAmount: "Пул Фонд",
@@ -435,7 +443,9 @@ UBS Foundation DAPP стремится создать децентрализов
             returnValue: "누적 고정 수입",
             totalAynamicReward: " 누적 추천 소득",
             rule: "계약 규칙",
+            fundTitle:"Foundation",
             rate:"가중치",
+            uconPool:"Pool",
             game: {
                 title: "보호 기금 [시작]",
                 poolAmount: "자금 수영장",
