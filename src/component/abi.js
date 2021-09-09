@@ -5,7 +5,7 @@ import {Toast} from 'antd-mobile'
 
 const config = {
     name: "UBS Foundation V1.5",
-    contractAddress: "4pxhiT1cw95CZa7u82SEghwtfRVBiYBJXGrDDAzzWfCRXvMNrseStwuPC5HCXTfpgCguDgKb2ER5Kqin7gBAt1mN",
+    contractAddress: "UBS_Foundation_V15",
     github: "https://github.com/ubsgame/foundation",
     author: "ubsgame",
     url: document.location.href,
@@ -115,7 +115,7 @@ const abi = [{
     "type": "event"
 }];
 
-const caddress = config.contractAddress;
+const caddress = "4pxhiT1cw95CZa7u82SEghwtfRVBiYBJXGrDDAzzWfCRXvMNrseStwuPC5HCXTfpgCguDgKb2ER5Kqin7gBAt1mN";
 const contract = serojs.callContract(abi, caddress);
 
 
