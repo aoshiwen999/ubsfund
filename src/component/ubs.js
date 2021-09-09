@@ -538,7 +538,7 @@ class Ubs extends Component {
                 <WhiteSpace size="lg"/>
 
                 <WingBlank size="lg">
-                    <List renderHeader={<span className="title">{language.e().account.fundTitle}</span>}>
+                    {myShare>0 && <List renderHeader={<span className="title">{language.e().account.fundTitle}</span>}>
                         <List.Item>
                         {myShare>0 && <div>
                                 <span className="my-share"><Badge text={`${language.e().account.rate}: ${myShare}%`}  style={{ marginLeft: 0, padding: '2px',fontSize:'13px',fontWeight:600, backgroundColor: '#21b68a', borderRadius: 4 }} /></span>
@@ -547,7 +547,7 @@ class Ubs extends Component {
                                 <span className="my-share"><Badge text={`${language.e().account.uconPool}: ${uconPool} UCON`}  style={{ marginLeft: 0, padding: '2px',fontSize:'13px',fontWeight:600, backgroundColor: '#2141b6', borderRadius: 4 }} /></span>
                         </div>}
                         </List.Item>
-                    </List>
+                    </List>}
                 </WingBlank>
 
                 <WhiteSpace size="lg"/>
